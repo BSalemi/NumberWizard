@@ -8,7 +8,7 @@ public class NumberWizard : MonoBehaviour
     int max = 1000;
     int min = 1;
 
-    int guess;
+    int guess = 500;
     
     void Start()
     {
@@ -26,16 +26,22 @@ public class NumberWizard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow)) 
         {
             Debug.Log("Up Arrow was pressed");
+            min = guess;
+            Debug.Log(guess);
+            guess = (max + min) / 2;
         }
                
         else if (Input.GetKeyDown(KeyCode.DownArrow)) 
         {
             Debug.Log("Down Key was pressed");
+            max = guess;
+            Debug.Log(guess);
+            guess = (max + min) / 2;
         }
         
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Woohoo! I guessed correctly.");
+            Debug.Log("Woohoo! I guessed correctly. Your number was: " + guess);
         }
             
     }
