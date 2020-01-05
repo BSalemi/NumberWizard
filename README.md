@@ -2,7 +2,7 @@
 
 Welcome to Number Wizard! 
 
-This is a simple number guessing game built with C# and Unity. 
+This is a simple console number guessing game built with C# and Unity. 
 
 # Installation 
 
