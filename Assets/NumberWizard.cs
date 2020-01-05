@@ -14,7 +14,7 @@ public class NumberWizard : MonoBehaviour
     {
         Debug.Log("Welcome to Number Wizard");
         Debug.Log("Pick a number between " + min + "and " + max + " and I bet I can guess it!");
-        Debug.Log("Tell me if your number is higher or lower than guess.");
+        Debug.Log("Tell me if your number is higher or lower than " + guess);
         Debug.Log("Push Up Key if higher, Push Down if lower, and Push Enter if correct.");
 
         
@@ -23,10 +23,20 @@ public class NumberWizard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow)) 
+        {
             Debug.Log("Up Arrow was pressed");
-            
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        }
+               
+        else if (Input.GetKeyDown(KeyCode.DownArrow)) 
+        {
             Debug.Log("Down Key was pressed");
+        }
+        
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Woohoo! I guessed correctly.");
+        }
+            
     }
 }
