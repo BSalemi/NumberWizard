@@ -16,11 +16,17 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Pick a number between " + min + "and " + max + " and I bet I can guess it!");
         Debug.Log("Tell me if your number is higher or lower than guess.");
         Debug.Log("Push Up Key if higher, Push Down if lower, and Push Enter if correct.");
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+            Debug.Log("Up Arrow was pressed");
+            
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+            Debug.Log("Down Key was pressed");
     }
 }
